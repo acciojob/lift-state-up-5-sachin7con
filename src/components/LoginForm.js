@@ -15,7 +15,7 @@ function LoginForm({ isLoggedIn, onLogin }) {
   };
 
   if (isLoggedIn) {
-    return <p>You are logged in.</p>;
+    return <p>You are logged in!</p>;
   }
 
   return (
@@ -25,14 +25,14 @@ function LoginForm({ isLoggedIn, onLogin }) {
           Username:
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
-      </div>
+      </div><br />
       <div>
         <label>
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
-      </div>
-      <button type="submit">Log In</button>
+      </div><br />
+      <button type="submit">Login</button>
     </form>
   );
 }

@@ -11,7 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{isLoggedIn ? "Welcome, User!" : "Please log in"}</h1>
+      
+      <h1>Parent Component</h1>
       <LoginForm isLoggedIn={isLoggedIn} onLogin={handleLogin} />
     </div>
   );
