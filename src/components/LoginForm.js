@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 function LoginForm({ isLoggedIn, onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -11,6 +13,8 @@ function LoginForm({ isLoggedIn, onLogin }) {
     // For the demo, we'll just log in
     if (username && password) {
       onLogin();
+    } else {
+      setError('Please enter a username and Password.');
     }
   };
 
