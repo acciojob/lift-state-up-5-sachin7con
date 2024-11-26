@@ -3,17 +3,18 @@ import React, { useState } from 'react';
 import LoginForm from './LoginForm';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
+    const funcLogin = () => {
+      setIsLoggedIn(true);
+    }
+   
+  
   return (
     <div className="App">
-      
       <h1>Parent Component</h1>
-      <LoginForm isLoggedIn={isLoggedIn} onLogin={handleLogin} />
+      {isLoggedIn ? (<p>Welcome! You are Logged in.</p>) : (<LoginForm isLoggedIn={isLoggedIn} onLogin={funcLogin} />)}
+      
     </div>
   );
 }
