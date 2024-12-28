@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Parent Component</h1>
-      {isLoggedIn ? (<p>Welcome! You are Logged in.</p>) : (<LoginForm isLoggedIn={isLoggedIn} onLogin={funcLogin} />)}
+      {isLoggedIn ? (<p>You are logged in!</p>) : (<LoginForm isLoggedIn={isLoggedIn} onLogin={funcLogin} />)}
       
     </div>
   );

@@ -1,4 +1,4 @@
-// SGN
+// SGN, ONS, JSLV, JMD, JBB, JSSR, JSM, JSRK, JSP
 import React, { useState } from 'react';
 
 function LoginForm({ onLogin }) {
@@ -6,7 +6,7 @@ function LoginForm({ onLogin }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
       e.preventDefault();
       if(username && password) {
         onLogin();
@@ -14,7 +14,7 @@ const handleSubmit = (e) => {
         alert('Please enter a valid Username and  Password')
       }
 
-}
+    }
 
 
   return (
@@ -22,7 +22,7 @@ const handleSubmit = (e) => {
       <form onSubmit={handleSubmit}>
         <label>Username: </label>
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} ></input>
-        <br/>
+        <br/><br/>
         <label>Password: </label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} ></input>
         <br/>
